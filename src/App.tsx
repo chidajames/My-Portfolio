@@ -7,15 +7,14 @@ import Contact from './pages/Contact';
 import Project from './pages/Project';
 import PhotographyAssignment from './pages/PhotographyAssignment';                    
 import "bootstrap/dist/css/bootstrap.min.css";                                     // React bootstrap dependency
-import { BrowserRouter, Route, Routes } from 'react-router-dom';                   // Routing requirements
-
+import { HashRouter, Route, Routes } from 'react-router-dom';                   // Routing requirements
 
 function App() {
   
 
   return (
     <>
-    <BrowserRouter>
+    <HashRouter>
     <Topbar/>
     <Routes>
       <Route index element={<Home/>} />
@@ -25,7 +24,7 @@ function App() {
       <Route path='/Blog' element={<Blog/>} />
       <Route path='/Blog/PhotographyAssignment' element={<PhotographyAssignment/>} />
     </Routes>
-    </BrowserRouter>
+    </HashRouter>
     
    
     </>
