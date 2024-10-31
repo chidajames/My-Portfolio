@@ -1,0 +1,15 @@
+
+.fsize{
+    font-size: x-large;         /* To change font size */ 
+}
+
+.no-underline {
+    text-decoration: none;      /* Removes the underline */
+    color: white;             /* Sets the text color to white */
+    font-size: large;
+  }
+
+.no-underline:hover {
+    color: gray;             /* Change the color on hover */
+    text-decoration: none;     /* Optional: add underline on hover */
+  }
