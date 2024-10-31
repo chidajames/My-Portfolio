@@ -1,4 +1,4 @@
-import React from 'react';                                                  // React dependency to pass paramerters
+
 import Col from 'react-bootstrap/Col';                                      // React bootstrap dependency
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
@@ -6,13 +6,13 @@ import Row from 'react-bootstrap/Row';
 import passion from "../assets/Passion-photo-thumbnail.jpg";                // Importing photos to be displayed
 import headshot from "../assets/headshot-thumnail.jpg";
 import aesthetic from "../assets/aesthetic-dramatic-shot-thumb.jpg";
-import Modal from 'react-bootstrap/Modal';
+
 
 // Function to separate complete blog into parts
 
 function Aestheticphoto() {
     // defining constants that will be used in this function
-    const [modalShow, setModalShow] = React.useState(false);
+    
     return (
         // creating a grid system with rows and columns
         <Container>
@@ -21,12 +21,8 @@ function Aestheticphoto() {
             <Col md={4} >
             <br /><br /><br /><br />
             {/* checking the condition if the image is clicked in order to be seen in a focus mode */}
-            <Image src={aesthetic} thumbnail fluid onClick={() => setModalShow(true)} />
+            <Image src={aesthetic} thumbnail fluid />
   
-            <MyAestheticPhoto
-                show={modalShow}
-                onHide={() => setModalShow(false)}
-            />
             </Col>    
 
             <Col>
@@ -54,8 +50,7 @@ function Aestheticphoto() {
   }
 
   function Passionphoto() {
-    // defining constants that will be used in this function
-    const [modalShow, setModalShow] = React.useState(false);
+   
     return (
         // creating a grid system with rows and columns
         <Container>
@@ -83,13 +78,8 @@ function Aestheticphoto() {
             <Col md={4} >
             {/* adding image for the blog post */}
             {/* checking the condition if the image is clicked in order to be seen in a focus mode */}
-            <Image src={passion} thumbnail fluid onClick={() => setModalShow(true)} />
+            <Image src={passion} thumbnail fluid />
             
-            <MyPassionPhoto
-                 show={modalShow}
-                    onHide={() => setModalShow(false)}
-             />
-
             </Col>  
         </Row>
     
@@ -99,8 +89,7 @@ function Aestheticphoto() {
   }
 
   function Facephoto() {
-    // defining constants that will be used in this function
-    const [modalShow, setModalShow] = React.useState(false);
+    
     return (
         // creating a grid system with rows and columns
         <Container>
@@ -109,12 +98,8 @@ function Aestheticphoto() {
             <Col md={4} >
             <br />
             {/* checking the condition if the image is clicked in order to be seen in a focus mode */}
-            <Image src={headshot} thumbnail fluid onClick={() => setModalShow(true)} />
+            <Image src={headshot} thumbnail fluid />
   
-            <MyFacePhoto
-                show={modalShow}
-                 onHide={() => setModalShow(false)}
-             />
         
             </Col>    
             <Col>
@@ -177,69 +162,3 @@ function Aestheticphoto() {
     
   );
 }
-
-// Function that takes properties to open image as a popup using bootstrap modal feature
-
-function MyAestheticPhoto(props) {
-    
-    return (
-      <Modal
-        {...props}
-        size="lg"
-        aria-labelledby="contained-modal-title-vcenter"
-        centered
-      >
-        <Modal.Header closeButton>
-          <Modal.Title id="contained-modal-title-vcenter">
-            Aesthetic photo
-          </Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-         <Image src={aesthetic} fluid/>
-        </Modal.Body>
-      </Modal>
-    );
-  }
-
-  function MyPassionPhoto(props) {
-    
-    return (
-      <Modal
-        {...props}
-        size="lg"
-        aria-labelledby="contained-modal-title-vcenter"
-        centered
-      >
-        <Modal.Header closeButton>
-          <Modal.Title id="contained-modal-title-vcenter">
-            Passion photo
-          </Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-         <Image src={passion}/>
-        </Modal.Body>
-      </Modal>
-    );
-  }
-
-  function MyFacePhoto(props) {
-    
-    return (
-      <Modal
-        {...props}
-        size="lg"
-        aria-labelledby="contained-modal-title-vcenter"
-        centered
-      >
-        <Modal.Header closeButton>
-          <Modal.Title id="contained-modal-title-vcenter">
-            Headshot
-          </Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-         <Image src={headshot} fluid/>
-        </Modal.Body>
-      </Modal>
-    );
-  }
-  
