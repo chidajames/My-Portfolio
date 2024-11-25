@@ -24,7 +24,7 @@ import video from '../assets/videography.jpg'
             </Col>
                 
             <Col>
-                <Bigcard2/>   
+                <Link to="/Blog/VideoAssignment" className='no-underline'><Bigcard2/></Link> 
             </Col>
 
         </Row>
