@@ -1,4 +1,3 @@
-// This page will be implemented in phase 2 so a image is displayed when the user visits the projects page
 
 export default function Project() {
     return (
@@ -7,3 +6,4 @@ export default function Project() {
       </>
     );
   }
+

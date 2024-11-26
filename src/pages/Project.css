@@ -1,0 +1,21 @@
+.timeline-vertical {
+  position: relative;
+  padding: 20px 0;
+}
+
+.timeline-vertical hr {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background-color: #e0e0e0;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .timeline-vertical hr {
+    display: none;
+  }
+}

@@ -18,7 +18,7 @@ function Home() {
             </Row>
             <Row>
                 <Col xs={8}></Col>            {/* specifying the column split 8 and 4*/}
-                <Col xs={4} flex>
+                <Col xs={4}>
                     <h1 style={{fontWeight:'bolder'}}>Hello World!!</h1> 
                     <p className='welcome-text'>
                       A cheerful UI/UX designer who loves crafting intuitive user experiences. 

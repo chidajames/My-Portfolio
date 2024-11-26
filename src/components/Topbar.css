@@ -7,9 +7,11 @@
     text-decoration: none;      /* Removes the underline */
     color: white;             /* Sets the text color to white */
     font-size: large;
+    padding: 10px;
   }
 
 .no-underline:hover {
     color: gray;             /* Change the color on hover */
     text-decoration: none;     /* Optional: add underline on hover */
+    
   }

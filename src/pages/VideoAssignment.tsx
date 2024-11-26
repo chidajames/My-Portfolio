@@ -146,9 +146,9 @@ import "./VideoAssignment.css"
             
         </Row>
         <br /><br />
-        <Row>
+        {/* <Row>
             <Col></Col>
-            <Col thumbnail>
+            <Col thumbnail={true}>
             <iframe 
             style={{"height":"300px","width":"500px"}} 
             src="https://www.youtube.com/embed/_vJaTqmc09s" 
@@ -161,7 +161,7 @@ import "./VideoAssignment.css"
         <div className="video-box">
           
         </div>
-        </Row>
+        </Row> */}
 
     <br />
     

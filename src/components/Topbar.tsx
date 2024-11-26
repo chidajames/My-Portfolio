@@ -31,11 +31,11 @@ function Topbar() {
 
               {/* Linking all navbar elements to specific page */}
               
-              <Nav.Link><NavLink className="no-underline" to='/'>Home</NavLink></Nav.Link>
-              <Nav.Link><NavLink className="no-underline" to='/AboutMe'>About Me</NavLink></Nav.Link>
-              <Nav.Link><NavLink className="no-underline" to='/Project'>Projects</NavLink></Nav.Link>
-              <Nav.Link><NavLink className="no-underline" to='/Blog'>Blogs</NavLink></Nav.Link>
-              <Nav.Link><NavLink className="no-underline" to='/Contact'>Contacts</NavLink></Nav.Link>
+              <NavLink className="no-underline" to='/'>Home</NavLink>
+              <NavLink className="no-underline" to='/AboutMe'>About Me</NavLink>
+              <NavLink className="no-underline" to='/Project'>Projects</NavLink>
+              <NavLink className="no-underline" to='/Blog'>Blogs</NavLink>
+              <NavLink className="no-underline" to='/Contact'>Contacts</NavLink>
             </Navbar.Collapse>
           </Nav>
         </Container>
