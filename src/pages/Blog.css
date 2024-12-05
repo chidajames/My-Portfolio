@@ -1,11 +1,21 @@
-.card{                              /* adding on hover animation for cards*/
-    transition: all 0.25s;
-    font-size: medium;
+/* Blog.css */
+.tabs-container {
+  padding: 20px 0;
+  background-color: #f4f4f4;
 }
 
-.card:hover{                        /* Defining animation time*/
-    transform: scale(1.02);
+.card-img-top {
+  object-fit: cover;
+  height: 250px;
+}
+
+.card-title {
+  font-size: 22px; /* Change font size */
+  font-weight: bold; /* Change font weight */
+  color: #813F21; /* Change text color */
 }
 
 
- 
+.reaction{
+  border-radius:50px;
+}

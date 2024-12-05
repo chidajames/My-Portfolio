@@ -1,0 +1,93 @@
+/* Styles for individual image items */
+.image-item {
+  /* Add a smooth transition effect when hovering */
+  transition: transform 0.3s ease;
+  /* Change cursor to pointer to indicate clickability */
+  cursor: pointer;
+}
+
+/* Slight scale increase on hover to provide visual feedback */
+.image-item:hover {
+  transform: scale(1.05);
+}
+
+/* Styling for gallery thumbnails */
+.gallery-thumbnail {
+  /* Fixed height for consistent layout */
+  height: 250px;
+  /* Ensure image covers the container without stretching */
+  object-fit: cover;
+  /* Make image width 100% of its container */
+  width: 100%;
+}
+
+/* Styling for image titles */
+.image-title {
+  /* Add some top margin */
+  margin-top: 10px;
+  /* Center the text */
+  text-align: center;
+  /* Make the title slightly bolder */
+  font-weight: 500;
+}
+
+/* Container for each image */
+.image-wrapper {
+  /* Positioning context for pseudo-element */
+  position: relative;
+  /* Hide anything that goes outside the wrapper */
+  overflow: hidden;
+  /* Rounded corners */
+  border-radius: 8px;
+  /* Subtle shadow for depth */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect using pseudo-element */
+.image-wrapper::after {
+  /* Create an overlay */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* Start with transparent background */
+  background: rgba(0, 0, 0, 0);
+  /* Smooth transition for the hover effect */
+  transition: background 0.3s ease;
+}
+
+/* Slight darkening effect when hovering */
+.image-wrapper:hover::after {
+  /* Add a transparent black overlay */
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.tabs-container{
+  background-color:Transparent;
+}
+
+.nav-tabs .nav-link {
+  color: #A35A32; /* Tab text color */
+  background-color: transparent; /* Background for inactive tabs */
+  border: none; /* Remove borders */
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover effect for tabs */
+.nav-tabs .nav-link:hover {
+  color: #A35A32; /* Darker blue on hover */
+}
+
+/* Change active tab color and underline */
+.nav-tabs .nav-link.active {
+  color: #fff; /* Active tab text color */
+  background-color: #A35A32; /* Background for active tab */
+  border-color: #A35A32 #A35A32 transparent; /* Border color for underline */
+}
+
+/* Change the bottom border (indicator line) */
+.nav-tabs {
+  border-bottom: 2px solid #A35A32; /* Line under the tabs */
+}

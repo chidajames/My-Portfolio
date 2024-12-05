@@ -3,12 +3,13 @@ import Col from 'react-bootstrap/Col';                                      // R
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
+import Button from 'react-bootstrap/Button';
+import { Link } from "react-router-dom";
 import img1 from "../assets/video img1.jpeg";                // Importing photos to be displayed
 import img2 from "../assets/video img2.jpeg";
 import img3 from "../assets/Video img3.jpeg";
 import img4 from "../assets/video img4.jpeg";
 import Coverimage from "../assets/videography cover - Copy.png";
-import "./VideoAssignment.css"
 
   // Main function that returns to App.tsx
 
@@ -123,6 +124,12 @@ import "./VideoAssignment.css"
             gave me a deeper appreciation for the creative and logistical efforts behind every frame 
             of a product demo video. It was a fulfilling journey that I am excited to replicate in future projects!
             </p>
+            <Link to="/Gallery" className='no-underline'>
+              <Button className='primary-button'>
+              Click to Watch Video
+              </Button>
+            </Link>
+           
             </Col>
         </Row>
         <br />

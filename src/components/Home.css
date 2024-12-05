@@ -1,16 +1,34 @@
+.page-background {
+  min-height: 100vh;
+  background-image: url('../assets/Background Image.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align:center;
+}
 
-  .page-background {
-    height: 100vh;                                              /* Full height of the viewport */
-    background-image: url('../assets/headshot 5 crop.jpg');     /* Reference from public folder */
-    background-size: cover;                                     /* Ensure the image covers the entire div */
-    background-repeat: no-repeat;                               /* Does not repeat the image if it is small */
-    display: flex;                                              /* automatically resize background image according to screen size */
+.welcome-text {
+  font-size: 1rem;
+  font-weight: 300;
+  text-align: center;
+  
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
   }
+}
 
-  .welcome-text{                                                
-    display: flex;                                               /* making it flexbox so that it will be responsive */ 
-    font-size: large;
-    font-weight: lighter;
-    justify-content: center;
-  }
+.home-content {
+  display: flex;
+  align-items: flex-end; /* Align items to the bottom vertically */
+  justify-content: flex-end; /* Align items to the right horizontally */
+  height: 100%;
+}
 
+.Home-color{
+ 
+  color:black !important;
+ 
+}

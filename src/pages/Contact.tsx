@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
-import { MapPin, Mail, Phone, Printer } from 'lucide-react';
+import { MapPin, Mail, Phone, Linkedin,Github } from 'lucide-react';
 import './Contacts.css';
+import '../index.css'
 
 interface FormData {
   name: string;
@@ -34,34 +35,45 @@ const Contact = () => {
         <Row className="g-4">
           <Col md={6}>
             <div className="contact-card contact-info p-4">
-              <h2 className="fs-1 fw-bold mb-4">Contact Us</h2>
+              <h2 className="fs-1 fw-bold mb-4">Connect with me</h2>
               
               <div className="d-flex flex-column gap-3">
                 <div className="contact-item">
                   <MapPin size={24} />
                   <div>
-                    52, Avenue ve Newyork<br/>
-                    221094 Newyork
+                    Thomond Village, Castletroy<br/>
+                    Limerick, Ireland.
                   </div>
                 </div>
                 
-                <div className="contact-item">
+                <div className="contact-item" >
                   <Mail size={24} />
-                  <a href="mailto:hello@loremipsum.com" className="contact-link">
-                    hello@loremipsum.com
+                  <a href="mailto:24171441@studentmail.ul.ie" style={{color:'white'}}>
+                  24171441@studentmail.ul.ie
                   </a>
                 </div>
                 
                 <div className="contact-item">
                   <Phone size={24} />
-                  <a href="tel:+3356-1589-2105" className="contact-link">
+                  <a href="tel:+3356-1589-2105" style={{color:'white'}}>
                     +3356 1589 2105
                   </a>
                 </div>
-                
+
+               
+
                 <div className="contact-item">
-                  <Printer size={24} />
-                  <span>+3356 1589 2100</span>
+                  <Linkedin size={24} />
+                  <a href="https://www.linkedin.com/in/chidanand-g-010a7b15a/" style={{color:'white'}}>
+                    Chidanand G
+                  </a>
+                </div>
+
+                <div className="contact-item">
+                  <Github size={24} />
+                  <a href="https://github.com/chidajames" style={{color:'white'}}>
+                    Chidajames
+                  </a>
                 </div>
               </div>
             </div>
@@ -69,8 +81,8 @@ const Contact = () => {
 
           <Col md={6}>
             <div className="contact-card contact-form p-4">
-              <h2 className="fs-1 fw-bold text-dark mb-3">Get in Touch</h2>
-              <p className="text-muted mb-4">Feel free to drop us a line below!</p>
+              <h2 className="fs-1 fw-bold mb-3">Drop In!!</h2>
+              <p className="mb-4">Drop your details below to get in touch</p>
               
               <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3">
@@ -109,8 +121,7 @@ const Contact = () => {
                 
                 <Button
                   type="submit"
-                  variant="danger"
-                  className="submit-button px-4 py-2 rounded-pill"
+                  className="primary-button"
                 >
                   SEND
                 </Button>

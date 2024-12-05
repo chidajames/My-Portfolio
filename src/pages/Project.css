@@ -1,21 +1,123 @@
-.timeline-vertical {
+.tabs-container {
+  
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tab-content-wrapper {
+  padding: 20px;
+  background-color: white;
+  border-radius: 0 0 8px 8px;
+}
+
+.tab-content-wrapper h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.Mobile-details {
+  margin-top: 15px;
+}
+
+/* Optional: Add some hover and focus states */
+.nav-tabs .nav-link {
+  transition: all 0.3s ease;
+}
+
+.nav-tabs .nav-link:hover {
+  background-color: #f1f3f5;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: white;
+  border-color: #007bff #007bff #fff;
+  color: #007bff;
+}
+
+/* Project Card Styles */
+.project-card {
   position: relative;
-  padding: 20px 0;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.timeline-vertical hr {
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.project-overlay {
   position: absolute;
-  left: 50%;
-  top: 0;
-  transform: translateX(-50%);
-  width: 2px;
-  height: 100%;
-  background-color: #e0e0e0;
-  z-index: 1;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: 0.5s ease;
 }
 
-@media (max-width: 768px) {
-  .timeline-vertical hr {
-    display: none;
-  }
+.project-card:hover .project-overlay {
+  height: 30%;
+}
+
+.project-text {
+  color: white;
+  font-size: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.project-card:hover .project-text {
+  opacity: 1;
+}
+
+.project-title {
+  color: white;
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+.nav-tabs .nav-link {
+  color: #A35A32; /* Tab text color */
+  background-color: transparent; /* Background for inactive tabs */
+  border: none; /* Remove borders */
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover effect for tabs */
+.nav-tabs .nav-link:hover {
+  color: #A35A32; /* Darker blue on hover */
+}
+
+/* Change active tab color and underline */
+.nav-tabs .nav-link.active {
+  color: #fff; /* Active tab text color */
+  background-color: #A35A32; /* Background for active tab */
+  border-color: #A35A32 #A35A32 transparent; /* Border color for underline */
+}
+
+/* Change the bottom border (indicator line) */
+.nav-tabs {
+  border-bottom: 2px solid #A35A32; /* Line under the tabs */
 }

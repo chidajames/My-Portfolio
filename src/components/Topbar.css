@@ -1,17 +1,53 @@
 
-.fsize{
-    font-size: x-large;         /* To change font size */ 
-}
-
 .no-underline {
     text-decoration: none;      /* Removes the underline */
-    color: white;             /* Sets the text color to white */
-    font-size: large;
-    padding: 10px;
+  
+    font-size: 16px;
+    padding: .5rem;
   }
 
 .no-underline:hover {
-    color: gray;             /* Change the color on hover */
+    color: #D78C64;             /* Change the color on hover */
     text-decoration: none;     /* Optional: add underline on hover */
     
   }
+
+.container-fluid {
+  padding-left: 1rem; /* Zero padding by default for mobile screens */
+  padding-right: 1rem;
+}
+
+/* For tablets and larger screens */
+@media (min-width: 768px) {
+  .container-fluid {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
+/* For desktop and larger screens */
+@media (min-width: 1024px) {
+  .container-fluid {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
+
+.navbar-transparent {
+  
+  position: Fixed;
+  width: 100%; /* Ensures full width */
+  z-index: 1000; /* Keeps it above other content */
+  background-color: rgba(0,0,0,0);
+}
+
+.navbar-colored {
+  background-color: #F7D6B3A1; /* Choose a color for the other pages */
+  color: #D78C64; /* Adjust text color */
+}
+
+.active {
+  font-weight: bold;
+  color: #AA582D; /* Highlight active tab */
+}

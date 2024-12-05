@@ -1,28 +1,61 @@
-
-import Col from 'react-bootstrap/Col';                                      // React bootstrap dependency
+import { useState } from 'react';
+import { Modal } from 'react-bootstrap';
+import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
-import passion from "../assets/Passion-photo-thumbnail.jpg";                // Importing photos to be displayed
+import passion from "../assets/Passion-photo-thumbnail.jpg";
 import headshot from "../assets/headshot-thumnail.jpg";
 import aesthetic from "../assets/aesthetic-dramatic-shot-thumb.jpg";
 
+interface ExpandableImageProps {
+  src: string;
+  alt: string;
+}
 
-// Function to separate complete blog into parts
+function ExpandableImage({ src, alt }: ExpandableImageProps) {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  return (
+    <>
+      <Image 
+        src={src} 
+        alt={alt} 
+        thumbnail 
+        fluid 
+        onClick={handleShow} 
+        style={{ cursor: 'pointer' }} 
+      />
+
+      <Modal 
+        show={show} 
+        onHide={handleClose} 
+        centered 
+        size="xl"
+      >
+        <Modal.Body className="text-center">
+          <Image 
+            src={src} 
+            alt={alt} 
+            fluid 
+            style={{ maxHeight: '90vh', maxWidth: '100%' }} 
+          />
+        </Modal.Body>
+      </Modal>
+    </>
+  );
+}
 
 function Aestheticphoto() {
-    // defining constants that will be used in this function
-    
     return (
-        // creating a grid system with rows and columns
         <Container>
         <Row>
-            {/* adding image for the blog post */}
             <Col md={4} >
             <br /><br /><br /><br />
-            {/* checking the condition if the image is clicked in order to be seen in a focus mode */}
-            <Image src={aesthetic} thumbnail fluid />
-  
+            <ExpandableImage src={aesthetic} alt="Aesthetic Shot" />
             </Col>    
 
             <Col>
@@ -41,21 +74,15 @@ function Aestheticphoto() {
                 I also adjusted the teal color of the dome to make it stand out against the background, as it appeared a bit dull in the original image.
             </p>    
             </Col>
-            
         </Row>
-    
-    </Container>
-
+        </Container>
     );
-  }
+}
 
-  function Passionphoto() {
-   
+function Passionphoto() {
     return (
-        // creating a grid system with rows and columns
         <Container>
         <Row>
-            
             <Col className="text-end">
             <h1>Passion photography</h1>
             <h5>Aperture (f/1.65) | ISO 640 | Shutter Speed (1/50 seconds) | Mobile Focal Length (6.19mm)</h5>
@@ -63,45 +90,35 @@ function Aestheticphoto() {
                 So, I opted to use a mobile camera with an aperture of f/1.65 as it is capable of allowing more light to fall on the sensor. 
                 Because of the wide aperture a natural and pleasing bokeh effect was produced that subtly blurs the foreground while keeping the background in focus. 
                 The shutter speed was set to 1/15 sec to allow more light to fall on the image. 
-                I couldn’t lower the shutter speed furthermore as it was a handheld shot, I tried lowering the shutter speed but the images taken were blurred because it was not steadily held. 
+                I couldn't lower the shutter speed furthermore as it was a handheld shot, I tried lowering the shutter speed but the images taken were blurred because it was not steadily held. 
                 Because of this I increased the ISO and played around a bit to finally settled with ISO 640 which produced a balanced shot.
             </p>
             <p>In post-processing, I cropped the original ultra-wide shot to recompose the image, 
                 ensuring the subject was positioned at an intersection point following the rule of thirds. 
                 I emphasized the colors of the basketball to make it pop against a darker background, 
-                which removed distractions and guided the viewer’s eye. The lines on the basketball serve as leading elements, 
+                which removed distractions and guided the viewer's eye. The lines on the basketball serve as leading elements, 
                 directing attention from the ball toward the subject, 
                 adding a subtle visual path for the viewer to follow through in the image.
             </p>
             </Col>
             
             <Col md={4} >
-            {/* adding image for the blog post */}
-            {/* checking the condition if the image is clicked in order to be seen in a focus mode */}
-            <Image src={passion} thumbnail fluid />
-            
+            <ExpandableImage src={passion} alt="Passion Photography" />
             </Col>  
         </Row>
-    
-    </Container>
-
+        </Container>
     );
-  }
+}
 
-  function Facephoto() {
-    
+function Facephoto() {
     return (
-        // creating a grid system with rows and columns
         <Container>
         <Row>
-            {/* adding image for the blog post */}
             <Col md={4} >
             <br />
-            {/* checking the condition if the image is clicked in order to be seen in a focus mode */}
-            <Image src={headshot} thumbnail fluid />
-  
-        
+            <ExpandableImage src={headshot} alt="Headshot" />
             </Col>    
+
             <Col>
             <h1>Headshot</h1>
             <h5>Aperture (f/2.8) | ISO 100 | Shutter Speed (1/15 seconds) | Focal Length (18mm)</h5>
@@ -123,23 +140,17 @@ function Aestheticphoto() {
             enhancing the image's simplicity and intimacy. 
             </p>
             </Col>
-            
         </Row>
-    <br /><br /><br />
-    </Container>
-
+        <br /><br /><br />
+        </Container>
     );
-  }
+}
 
-
-  // Main function that returns to App.tsx
-
-  export default function PhotographyAssignment() {
+export default function PhotographyAssignment() {
   return (
     <>
-    
     <Container>
-    <br /><br />
+    <br />
     <h1>Photography Assignment</h1>
     <br /><br />
         <Row>
@@ -153,12 +164,7 @@ function Aestheticphoto() {
         <Row>
             <Facephoto/>
         </Row>
-    
     </Container>
-
-    
-    
     </>
-    
   );
 }

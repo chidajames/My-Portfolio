@@ -24,9 +24,67 @@
 /* defining background color and fonts to be used in application */
 body{
   font-family: 'Poppins',sans-serif;
-  background-color: #c6a67b;
+  color:#813F21;
+  background:#FFFDF2;
 }
 
 p {
   text-align: justify;
+  color:#A35A32;
+}
+
+a{
+  color:black;
+}
+
+.text-secondary{
+  color : #754129;
+}
+
+.secondary-button{
+  color: #A35A32; /* Button text color */
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: transparent; /* Transparent background */
+  border: 2px solid #A35A32; /* Border with desired color */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: transform 0.2s ease; /* Smooth size change */
+}
+
+.secondary-button:hover {
+  transform: scale(1.05); /* Increase size by 20% */
+  color: #A35A32; /* Button text color */
+  background-color: transparent; /* Transparent background */
+  border: 2px solid #A35A32; /* Border with desired color */
+}
+
+.secondary-button:active, .secondary-button:focus {
+  color: #A35A32 !important; /* Button text color */
+  background-color: transparent !important; /* Transparent background */
+  border: 2px solid #A35A32 !important; /* Border with desired color */
+}
+
+.primary-button{
+  color: white; /* Button text color */
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #A35A32; /* Transparent background */
+  border: 2px solid #A35A32; /* Border with desired color */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: transform 0.2s ease; /* Smooth size change */
+}
+
+.primary-button:hover {
+  transform: scale(1.05); /* Increase size by 20% */
+  color: white; /* Button text color */
+  background-color: #A35A32; /* Transparent background */
+  border: 2px solid #A35A32; /* Border with desired color */
+}
+
+.primary-button:focus, .primary-button:active  {
+  color: white !important; /* Button text color */
+  background-color: #A35A32 !important; /* Transparent background */
+  border: 2px solid #A35A32 !important; /* Border with desired color */
 }
